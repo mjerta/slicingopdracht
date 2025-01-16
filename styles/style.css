@@ -123,7 +123,7 @@ main {
     display: flex;
     flex-direction: column;
     row-gap: .3rem;
-    padding-left: calc(15rem / 16);
+    padding-left: calc(12rem / 16);
   }
 
 
@@ -168,7 +168,7 @@ main {
     font-size: 1.3rem;
   }
 
-  .price-addtion {
+  .price-addition {
     color: var(--light-green);
   }
 }
@@ -250,6 +250,4 @@ main {
   .prices-comparison {
     margin-bottom: unset;;
   }
-
-
 }
