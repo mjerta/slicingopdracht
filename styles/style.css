@@ -42,7 +42,8 @@ header {
   justify-content: space-between;
 
   & .logo {
-    width: calc(238rem / 16);
+    height: calc(40rem/16);
+    align-self: center;
   }
 
   & address {
@@ -67,6 +68,10 @@ main {
 }
 
 @media screen and (min-width: 1024px) {
+  header {
+    flex-basis: calc(100rem / 16);
+  }
+
   .phone-number {
     display: unset;
     color: var(--text-color);
