@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 *, *::before, *::after {
   margin: 0;
   padding: 0;
@@ -30,6 +31,8 @@ body {
   --orange-color: #EA721B;
   --white-color: #FFF;
   --less-white-text-color: #F4F4F1;
+  --border-color: #E8E7E1;
+  --border-color-darker: #484640;
 }
 
 /*Layout*/
@@ -49,7 +52,7 @@ header {
   justify-content: space-between;
 
   & .logo {
-    height: calc(40rem/16);
+    height: calc(40rem / 16);
     align-self: center;
   }
 
@@ -75,7 +78,8 @@ main {
   background: var(--main-background-color);
   flex-grow: 1;
   align-items: center;
-  padding: calc(58rem/16) calc(35rem/16);
+  padding: calc(58rem / 16) calc(35rem / 16);
+  overflow: hidden;
 }
 
 
@@ -89,11 +93,6 @@ main {
     flex-direction: column;
   }
 
-  & tr {
-    display: flex;
-    width: 100%;
-  }
-
   & td {
     flex-basis: 50%;
     flex-grow: 1;
@@ -103,11 +102,15 @@ main {
 
 .description-price-example {
   display: flex;
-  flex-direction: column;
-  row-gap: .3rem;
-  padding: calc(30rem/16) calc(19rem / 16);
-  background-color: var(--dark-color);
-  color: white;
+
+  td {
+    display: flex;
+    flex-direction: column;
+    row-gap: .3rem;
+    padding: calc(30rem / 16) calc(19rem / 16);
+    background-color: var(--dark-color);
+    color: white;
+  }
 
   & ul {
     color: var(--less-white-text-color);
@@ -122,6 +125,7 @@ main {
     color: var(--orange-color);
   }
 }
+
 .sales-comparison-title > td, .prices-comparison > td {
   justify-content: center;
   align-items: center;
@@ -130,6 +134,7 @@ main {
 .sales-comparison-title {
   flex-basis: 2.5rem;
   color: var(--white-color);
+
   td {
     background-color: var(--orange-color);
     border-right: 1px solid #D6A40080;
@@ -137,26 +142,32 @@ main {
 }
 
 .prices-comparison {
+  display: flex;
   flex-basis: calc(72rem / 16);
   background-color: var(--white-color);
-  border-top: 1px solid #E8E7E1;
+  border-top: 1px solid var(--border-color);
   margin-bottom: calc(32rem / 16);
 
   td {
     display: flex;
     flex-direction: column;
-    border-right: 1px solid #E8E7E1;
   }
+
+  td:first-of-type {
+    border-right: 1px solid var(--border-color);
+  }
+
   .price {
     font-weight: 600;
+    font-size: 1.3rem;
   }
+
   .price-addtion {
     color: var(--light-green);
   }
-
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1225px) {
   header {
     flex-basis: calc(100rem / 16);
   }
@@ -165,5 +176,38 @@ main {
     display: unset;
     color: var(--dark-color);
     font-weight: 600;
+  }
+
+  .price-examples {
+    tbody {
+      width: calc(1160rem/16);
+      flex-direction: row;
+    }
+  }
+
+  .sales-comparison-title {
+    display: none;
+  }
+
+  .description-price-example {
+    flex-basis: 700px;
+    border-top: 1px solid var(--border-color-darker);
+  }
+
+
+  .description-price-example, .prices-comparison {
+    flex-basis: 50%;
+  }
+
+
+  .description-price-example {
+    & ul {
+      justify-content: space-between;
+      flex-direction: row;
+    }
+  }
+
+  .prices-comparison {
+    margin-bottom: unset;;
   }
 }
