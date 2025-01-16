@@ -123,12 +123,7 @@ main {
     display: flex;
     flex-direction: column;
     row-gap: .3rem;
-    list-style-position: inside;
-
-    & li {
-      /*flex-basis: 50%;*/
-
-    }
+    padding-left: calc(15rem / 16);
   }
 
 
@@ -247,6 +242,7 @@ main {
 
       li {
         flex-basis: 50%;
+
       }
     }
   }
