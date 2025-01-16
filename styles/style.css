@@ -23,16 +23,16 @@ body {
 
 /*Colors*/
 :root {
-  --primary-color: #fdfdfd;
-  --secondary-color: #e8e7e1;
+  --bg-lightest: #fdfdfd;
+  --bg-secondary: #e8e7e1;
   --dark-color: #1c1a15;
-  --main-background-color: #e6e5df;
-  --light-green: #3aa935;
-  --orange-color: #EA721B;
+  --bg-main: #e6e5df;
+  --color-success: #3aa935;
+  --accent-color: #EA721B;
   --white-color: #FFF;
-  --less-white-text-color: #F4F4F1;
-  --border-color: #E8E7E1;
-  --border-color-darker: #484640;
+  --white-text-color: #F4F4F1;
+  --border-light: #E8E7E1;
+  --border-dark: #484640;
 }
 
 /*Layout*/
@@ -48,7 +48,7 @@ header {
   padding: 1rem calc(38rem / 16);
   flex-basis: calc(90rem / 16);
   flex-shrink: 0;
-  background-color: var(--primary-color);
+  background-color: var(--bg-lightest);
   justify-content: space-between;
 
   & .logo {
@@ -79,7 +79,7 @@ header {
 main {
   display: flex;
   flex-direction: column;
-  background: var(--main-background-color);
+  background: var(--bg-main);
   flex-grow: 1;
   align-items: center;
   padding-top: calc(58rem / 16);
@@ -123,7 +123,7 @@ main {
   }
 
   & ul {
-    color: var(--less-white-text-color);
+    color: var(--white-text-color);
     display: flex;
     flex-direction: column;
     row-gap: .3rem;
@@ -132,7 +132,7 @@ main {
 
 
   h4, li::marker {
-    color: var(--orange-color);
+    color: var(--accent-color);
   }
 }
 
@@ -146,7 +146,7 @@ main {
   color: var(--white-color);
 
   td {
-    background-color: var(--orange-color);
+    background-color: var(--accent-color);
     border-right: 1px solid #D6A40080;
   }
 }
@@ -155,7 +155,7 @@ main {
   display: flex;
   flex-basis: calc(72rem / 16);
   background-color: var(--white-color);
-  border-top: 1px solid var(--border-color);
+  border-top: 1px solid var(--border-light);
   margin-bottom: calc(32rem / 16);
 
   td {
@@ -164,7 +164,7 @@ main {
   }
 
   td:first-of-type {
-    border-right: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-light);
   }
 
   .price {
@@ -173,7 +173,7 @@ main {
   }
 
   .price-addition {
-    color: var(--light-green);
+    color: var(--color-success);
   }
 }
 
@@ -230,7 +230,7 @@ main {
 
   .description-price-example {
     flex-basis: 700px;
-    border-top: 1px solid var(--border-color-darker);
+    border-top: 1px solid var(--border-dark);
   }
 
 
