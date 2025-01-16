@@ -5,9 +5,14 @@
 }
 
 
-/*Fonts*/
+/*Fonts & defaults*/
+
+a {
+  text-decoration: none;
+}
 
 body {
+
 
 }
 
@@ -30,13 +35,42 @@ body {
 
 header {
   display: flex;
-  padding: 1rem 2rem;
+  padding: 1rem calc(38rem/16);
   flex-basis: calc(90rem/16);
   flex-shrink: 0;
-  background-color:var(--primary-color)
+  background-color:var(--primary-color);
+  justify-content: space-between;
+
+  & .logo {
+    width: calc(238rem/16);
+  }
+
+  & address {
+    display: flex;
+    align-items: center;
+    gap: .7rem;
+    font-style: unset;
+  }
+}
+.phone-icon {
+  width: 2rem;
+}
+
+.phone-number {
+  display: none;
 }
 
 main {
   background: var(--main-background-color);
   flex-grow: 1;
+}
+
+@media screen and (min-width: 1024px)  {
+  .phone-number {
+    display: unset;
+    color: var(--text-color);
+    font-weight: bold;
+  }
+
+  
 }
