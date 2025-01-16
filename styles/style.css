@@ -12,6 +12,13 @@ body {
 }
 
 /*Colors*/
+:root {
+  --primary-color: #fdfdfd;
+  --secondary-color: #e8e7e1;
+  --main-background-color: #e6e5df;
+  --text-color: #1c1a15;
+  --light-green: #3aa935;
+}
 
 /*Layout*/
 
@@ -26,10 +33,10 @@ header {
   padding: 1rem 2rem;
   flex-basis: calc(90rem/16);
   flex-shrink: 0;
-  background: blue;
+  background-color:var(--primary-color)
 }
 
 main {
-  background: yellow;
+  background: var(--main-background-color);
   flex-grow: 1;
 }
