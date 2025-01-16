@@ -12,6 +12,10 @@ a {
   text-decoration: none;
 }
 
+h4 {
+  text-transform: uppercase;
+}
+
 body {
   font-family: "Roboto", serif;
 }
@@ -20,9 +24,12 @@ body {
 :root {
   --primary-color: #fdfdfd;
   --secondary-color: #e8e7e1;
+  --dark-color: #1c1a15;
   --main-background-color: #e6e5df;
-  --text-color: #1c1a15;
   --light-green: #3aa935;
+  --orange-color: #EA721B;
+  --white-color: #FFF;
+  --less-white-text-color: #F4F4F1;
 }
 
 /*Layout*/
@@ -63,8 +70,90 @@ header {
 }
 
 main {
+  display: flex;
+  flex-direction: column;
   background: var(--main-background-color);
   flex-grow: 1;
+  align-items: center;
+  padding: calc(58rem/16) calc(35rem/16);
+}
+
+
+.price-examples {
+  min-width: calc(360rem / 16);
+  margin: 0;
+  padding: 0;
+
+  tbody {
+    display: flex;
+    flex-direction: column;
+  }
+
+  & tr {
+    display: flex;
+    width: 100%;
+  }
+
+  & td {
+    flex-basis: 50%;
+    flex-grow: 1;
+    display: flex;
+  }
+}
+
+.description-price-example {
+  display: flex;
+  flex-direction: column;
+  row-gap: .3rem;
+  padding: calc(30rem/16) calc(19rem / 16);
+  background-color: var(--dark-color);
+  color: white;
+
+  & ul {
+    color: var(--less-white-text-color);
+    display: flex;
+    flex-direction: column;
+    row-gap: .3rem;
+    list-style-position: inside;
+  }
+
+
+  h4, li::marker {
+    color: var(--orange-color);
+  }
+}
+.sales-comparison-title > td, .prices-comparison > td {
+  justify-content: center;
+  align-items: center;
+}
+
+.sales-comparison-title {
+  flex-basis: 2.5rem;
+  color: var(--white-color);
+  td {
+    background-color: var(--orange-color);
+    border-right: 1px solid #D6A40080;
+  }
+}
+
+.prices-comparison {
+  flex-basis: calc(72rem / 16);
+  background-color: var(--white-color);
+  border-top: 1px solid #E8E7E1;
+  margin-bottom: calc(32rem / 16);
+
+  td {
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #E8E7E1;
+  }
+  .price {
+    font-weight: 600;
+  }
+  .price-addtion {
+    color: var(--light-green);
+  }
+
 }
 
 @media screen and (min-width: 1024px) {
@@ -74,7 +163,7 @@ main {
 
   .phone-number {
     display: unset;
-    color: var(--text-color);
+    color: var(--dark-color);
     font-weight: 600;
   }
 }
