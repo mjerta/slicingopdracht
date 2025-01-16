@@ -40,7 +40,7 @@ body {
 body {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 header {
@@ -78,7 +78,9 @@ main {
   background: var(--main-background-color);
   flex-grow: 1;
   align-items: center;
-  padding: calc(58rem / 16) calc(35rem / 16);
+  padding-top: calc(58rem / 16);
+  padding-left: calc(35rem / 16);
+  padding-right: calc(35rem / 16);
   overflow: hidden;
 }
 
@@ -167,9 +169,17 @@ main {
   }
 }
 
+.labels-for-desktop {
+  display: none;
+}
+
 @media screen and (min-width: 1225px) {
   header {
     flex-basis: calc(100rem / 16);
+  }
+
+  main {
+    padding-top: calc(186rem / 16);
   }
 
   .phone-number {
@@ -179,15 +189,36 @@ main {
   }
 
   .price-examples {
+    position: relative;
+
     tbody {
-      width: calc(1160rem/16);
+      width: calc(1160rem / 16);
       flex-direction: row;
+    }
+
+    tbody:first-of-type {
+      .sales-comparison-title {
+        display: flex;
+        justify-content: space-around;
+        position: absolute;
+        width: 50%;
+        height: calc(50rem/16);
+        top:  calc(-50rem/16);
+        right: 0;
+
+        td {
+          flex-basis: 40%;
+          flex-grow: 0;
+        }
+      }
+
     }
   }
 
   .sales-comparison-title {
     display: none;
   }
+
 
   .description-price-example {
     flex-basis: 700px;
@@ -210,4 +241,6 @@ main {
   .prices-comparison {
     margin-bottom: unset;;
   }
+
+
 }
