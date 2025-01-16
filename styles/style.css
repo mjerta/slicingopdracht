@@ -1,7 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 *, *::before, *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 
@@ -12,8 +13,7 @@ a {
 }
 
 body {
-
-
+  font-family: "Roboto", serif;
 }
 
 /*Colors*/
@@ -35,14 +35,14 @@ body {
 
 header {
   display: flex;
-  padding: 1rem calc(38rem/16);
-  flex-basis: calc(90rem/16);
+  padding: 1rem calc(38rem / 16);
+  flex-basis: calc(90rem / 16);
   flex-shrink: 0;
-  background-color:var(--primary-color);
+  background-color: var(--primary-color);
   justify-content: space-between;
 
   & .logo {
-    width: calc(238rem/16);
+    width: calc(238rem / 16);
   }
 
   & address {
@@ -52,6 +52,7 @@ header {
     font-style: unset;
   }
 }
+
 .phone-icon {
   width: 2rem;
 }
@@ -65,12 +66,10 @@ main {
   flex-grow: 1;
 }
 
-@media screen and (min-width: 1024px)  {
+@media screen and (min-width: 1024px) {
   .phone-number {
     display: unset;
     color: var(--text-color);
-    font-weight: bold;
+    font-weight: 600;
   }
-
-  
 }
