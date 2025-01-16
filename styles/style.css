@@ -102,6 +102,10 @@ main {
   }
 }
 
+.sales-comparison-title {
+  display: flex;
+}
+
 .description-price-example {
   display: flex;
 
@@ -120,6 +124,11 @@ main {
     flex-direction: column;
     row-gap: .3rem;
     list-style-position: inside;
+
+    & li {
+      /*flex-basis: 50%;*/
+
+    }
   }
 
 
@@ -202,8 +211,8 @@ main {
         justify-content: space-around;
         position: absolute;
         width: 50%;
-        height: calc(50rem/16);
-        top:  calc(-50rem/16);
+        height: calc(50rem / 16);
+        top: calc(-50rem / 16);
         right: 0;
 
         td {
@@ -235,6 +244,10 @@ main {
     & ul {
       justify-content: space-between;
       flex-direction: row;
+
+      li {
+        flex-basis: 50%;
+      }
     }
   }
 
