@@ -59,8 +59,12 @@ header {
   & address {
     display: flex;
     align-items: center;
-    gap: .7rem;
-    font-style: unset;
+    font-style: normal;
+    a {
+      display: flex;
+      align-items: center;
+      gap: .7rem;
+    }
   }
 }
 
