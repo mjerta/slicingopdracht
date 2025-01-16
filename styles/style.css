@@ -1,0 +1,35 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/*Fonts*/
+
+body {
+
+}
+
+/*Colors*/
+
+/*Layout*/
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+header {
+  display: flex;
+  padding: 1rem 2rem;
+  flex-basis: calc(90rem/16);
+  flex-shrink: 0;
+  background: blue;
+}
+
+main {
+  background: yellow;
+  flex-grow: 1;
+}
